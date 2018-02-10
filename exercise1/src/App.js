@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import List from './components/List';
 
 class App extends Component {
   render() {
@@ -77,26 +77,21 @@ class App extends Component {
     };
 
     const friendNames = getNames(data);
-    console.log(friendNames);
+    // console.log(friendNames);
 
     const bestFriends = data.filter(({ isBestFriend }) => isBestFriend);
-    console.log(bestFriends);
+    // console.log(bestFriends);
 
     const bestFriendsNames = getNames(bestFriends);
-    console.log(bestFriendsNames);
+    // console.log(bestFriendsNames);
 
     const bestFriendsAverageAge = bestFriends.reduce((accum, curr) => accum += curr.age, 0) / bestFriends.length;
-    console.log(bestFriendsAverageAge);
+    // console.log(bestFriendsAverageAge);
 
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <List name="Friends" data={friendNames} />
+        <List name="Best Friends" data={bestFriendsNames} summary={`Average age: ${bestFriendsAverageAge}`}></List>
       </div>
     );
   }
