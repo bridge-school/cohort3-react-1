@@ -2,8 +2,9 @@
   text-align: center;
 }
 
-.App-left {
+.My-body {
   text-align: left;
+  padding: 20px 100px;
 }
 
 .App-logo {
@@ -24,6 +25,11 @@
 
 .App-intro {
   font-size: large;
+}
+
+.My-title {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {

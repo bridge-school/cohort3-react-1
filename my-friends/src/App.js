@@ -12,14 +12,16 @@ class App extends Component {
     return (
       <div className="App">
         <HeaderBar logo={logo} />
-        <p>All my friends:</p>
-        <MyFriends friendList={FriendList} />
-        <hr />
-        <p>My best friends:</p>
-        <MyBestFriends friendList={FriendList} />
-        <hr />
-        <p>Average age of my best friends:</p>
-        <AverageAgeBestFriends friendList={FriendList} />
+        <div className="My-body">
+          <p className="My-title">All my friends</p>
+          <MyFriends friendList={FriendList} />
+          <hr />
+          <p className="My-title">My best friends</p>
+          <MyBestFriends friendList={FriendList} />
+          <hr />
+          <p className="My-title">Average age of my best friends</p>
+          <AverageAgeBestFriends friendList={FriendList} />
+        </div>
       </div>
     );
   }
