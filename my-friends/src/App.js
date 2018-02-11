@@ -4,6 +4,7 @@ import './App.css';
 import { FriendList } from './data/ListOfFriends.js'
 import { MyFriends } from './components/AllMyFriends.js'
 import { MyBestFriends } from './components/MyBestFriends.js'
+import { AverageAgeBestFriends } from './components/AverageAgeBestFriends.js'
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <MyBestFriends friendList={FriendList} />
         <hr />
         <p>Average age of my best friends:</p>
+        <AverageAgeBestFriends friendList={FriendList} />
       </div>
     );
   }
