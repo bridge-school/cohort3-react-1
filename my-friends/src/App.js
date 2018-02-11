@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { FriendList } from './data/ListOfFriends.js'
 import { MyFriends } from './components/AllMyFriends.js'
+import { MyBestFriends } from './components/MyBestFriends.js'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <MyFriends friendList={FriendList} />
         <hr />
         <p>My best friends:</p>
+        <MyBestFriends friendList={FriendList} />
         <hr />
         <p>Average age of my best friends:</p>
       </div>
