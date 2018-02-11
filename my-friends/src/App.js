@@ -5,15 +5,13 @@ import { FriendList } from './data/ListOfFriends.js'
 import { MyFriends } from './components/AllMyFriends.js'
 import { MyBestFriends } from './components/MyBestFriends.js'
 import { AverageAgeBestFriends } from './components/AverageAgeBestFriends.js'
+import { HeaderBar } from './components/Header.js'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+        <HeaderBar logo={logo} />
         <p>All my friends:</p>
         <MyFriends friendList={FriendList} />
         <hr />
