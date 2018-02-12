@@ -5,9 +5,17 @@ import data from './data.json';
 
 class App extends Component {
   render() {
+    const avg = data.reduce((acc, curr) => {return acc + curr.age}, 0) / data.length;
     return (
       <div className="App">
         <Header text="Hello World">!!!</Header>
+        <div>
+          <p>The average age of my friends is
+            {
+            <span> {avg}.</span>
+            }
+          </p>
+        </div>
         <div className="my-block">
           <h2>Friends</h2>
             <ul>
