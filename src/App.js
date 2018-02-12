@@ -15,7 +15,19 @@ class App extends Component {
               data.map((friend) => <li>{friend.first}</li>)
             }
             </ul>
-          </div>
+        </div>
+        <div className="my-block">
+          <h2>Best Friends</h2>
+            <ul>
+            {
+              data.map((friend) => {
+                if (friend.isBestFriend) {
+                  return <li>{friend.first}</li>
+                }
+              })
+            }
+            </ul>
+        </div>
       </div>
     );
   }
