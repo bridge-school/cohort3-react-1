@@ -1,3 +1,4 @@
+
 # cohort3-react-1
 First React Assignment
 
@@ -74,3 +75,12 @@ Set a value in your component to friendList = above_data
 3. Make a list showing all your friends names
 4. Make a list only showing your best friends right next to it
 5. Show the average age of your best friends in a final section
+
+# Start up the Application
+
+cd in to your cohort-react-1/myapp directory
+then, enter:
+
+```
+npm start
+```
