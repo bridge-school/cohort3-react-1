@@ -8,6 +8,14 @@ class App extends Component {
     return (
       <div className="App">
         <Header text="Hello World">!!!</Header>
+        <div className="my-block">
+          <h2>Friends</h2>
+            <ul>
+            {
+              data.map((friend) => <li>{friend.first}</li>)
+            }
+            </ul>
+          </div>
       </div>
     );
   }
