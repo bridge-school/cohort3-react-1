@@ -1,5 +1,16 @@
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.my-block {
+  vertical-align:top;
+  display: inline-block;
+  margin-right: 3em;
+}
+
 .App {
-  text-align: center;
+  margin: 2em;
 }
 
 .App-logo {
