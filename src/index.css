@@ -4,6 +4,36 @@ body {
   font-family: sans-serif;
 }
 
-.firstList {
-	color:red;
+.mainData {
+	max-width: 730px;
+	margin: 5px auto;
+	text-align: center;
+}
+
+.friendList {
+	color:#4e4d4d;
+	list-style: none;
+	padding:0;
+	margin-bottom:0;
+}
+
+.friendList li:hover {
+	color:#62dbfb;
+}
+
+.listContainer {
+	text-align: left;
+	padding: 20px;
+	margin:10px;
+	display: inline-block;
+	background:lightgrey;
+	background:linear-gradient(to bottom right, lightgrey, white);
+}
+
+.clearBoth {
+	clear:both;
+}
+
+h2 {
+	margin:0;
 }

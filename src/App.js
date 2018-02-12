@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import List from './components/all-friends.js';
+import AllFriends from './components/all-friends.js';
+import BestFriends from './components/best-friends.js';
+import AverageAge from './components/average-age.js';
+import Friend_array from './components/data.js';
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,12 +12,22 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React 1</h1>
+          <h1 className="App-title">My Friend List</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <List/>
+        <section className="mainData">
+          <div className="listContainer">
+            <h2>All Friends</h2>
+            <AllFriends data={Friend_array}/>
+          </div>
+          <div className="listContainer">
+            <h2>Best Friends</h2>
+            <BestFriends data={Friend_array}/>
+          </div>
+          <div className="listContainer clearBoth">
+            <h2>Average Age</h2>
+            <AverageAge data={Friend_array}/>
+          </div> 
+        </section>
       </div>   
     );
   }
