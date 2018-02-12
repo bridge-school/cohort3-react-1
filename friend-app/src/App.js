@@ -8,7 +8,7 @@ import { friends } from "./data.js";
 export const extendedPersonList = friends.map(person => ({
   ...person,
   fullName: `${person.first} ${person.last}`,
-  id: `${person.age} ${person.name}`
+  id: `${person.age} ${person.last}`
 }));
 class App extends Component {
   render() {

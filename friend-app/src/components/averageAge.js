@@ -7,5 +7,10 @@ export const AverageAge = ({ data }) => {
       return a + b.age;
     }, 0) / bestFriends.length;
 
-  return <div>{averageAge}</div>;
+  return (
+    <div>
+      <h3>Average age of best friends</h3>
+      <div className="average-age-text">{averageAge}</div>
+    </div>
+  );
 };
