@@ -8,7 +8,7 @@ class App extends Component {
     const avg = data.reduce((acc, curr) => {return acc + curr.age}, 0) / data.length;
     return (
       <div className="App">
-        <Header text="Hello World">!!!</Header>
+        <Header>Friends List</Header>
         <div>
           <p>The average age of my friends is
             {

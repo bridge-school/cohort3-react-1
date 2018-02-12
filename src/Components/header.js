@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const Header = ({text, children}) => {
-  return <h1>{text}{children}</h1>;
+export const Header = ({children}) => {
+  return <h1>{children}</h1>;
 };
