@@ -1,6 +1,6 @@
 # cohort3-react-1
 
-First React Assignment
+First React Assignment!
 
 1. Make a React Application using `create-react-app`
 2. Using this Array:
