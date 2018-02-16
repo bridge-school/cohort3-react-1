@@ -2,40 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 import { Header } from './Components/header';
 import data from './data.json';
+import { AverageAge } from './Components/average-age';
+import { FriendsList } from './Components/friends-list';
+import { BestFriendsList } from './Components/best-friends-list';
+
 
 class App extends Component {
   render() {
-    const avg = data.reduce((acc, curr) => {return acc + curr.age}, 0) / data.length;
     return (
       <div className="App">
         <Header>Friends List</Header>
-        <div>
-          <p>The average age of my friends is
-            {
-            <span> {avg}.</span>
-            }
-          </p>
-        </div>
-        <div className="my-block">
-          <h2>Friends</h2>
-            <ul>
-            {
-              data.map((friend) => <li>{friend.first}</li>)
-            }
-            </ul>
-        </div>
-        <div className="my-block">
-          <h2>Best Friends</h2>
-            <ul>
-            {
-              data.map((friend) => {
-                if (friend.isBestFriend) {
-                  return <li>{friend.first}</li>
-                }
-              })
-            }
-            </ul>
-        </div>
+        <AverageAge data={ data }/>
+        <FriendsList data={ data }/>
+        <BestFriendsList data={ data }/>
       </div>
     );
   }
