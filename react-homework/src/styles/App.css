@@ -27,19 +27,27 @@
   font-size: 2em;
 }
 
-.listOfFriends,
-.listOfBestFriends {
+.listOfFriends {
   list-style-type: none;
   padding: 0;
-  width: 30%;
   margin: 0;
 }
 
-.averageAge {
+.averageAge,
+.listContainer {
   width: 30%;
 }
 
 p {
   text-decoration: underline;
   font-size: 1.5em;
+}
+
+.inputBox {
+  height: 30%;
+  font-size: 1.5em;
+  width: 40%;
+  align-self: center;
+  padding-left: 10px;
+  margin-top: 30px;
 }
