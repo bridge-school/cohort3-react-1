@@ -2,23 +2,26 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { FriendList } from './data/ListOfFriends.js'
-import { MyBestFriends } from './components/MyBestFriends.js'
 import { AverageAgeBestFriends } from './components/AverageAgeBestFriends.js'
 import { HeaderBar } from './components/Header.js'
 import DynamicList from './components/DynamicList.js'
-import SearchAllFriends from './components/SearchAllFriends.js'
+import SearchFriends from './components/SearchFriends.js'
 
 class App extends Component {
+
   render() {
+
+    let bestFriendsList = FriendList.filter( eachFriend => { return eachFriend.isBestFriend })
+
     return (
       <div className="App">
         <HeaderBar logo={logo} />
         <div className="My-body">
           <p className="My-title">All my friends</p>
-          <SearchAllFriends friendList={FriendList} />
+          <SearchFriends friendList={FriendList} />
           <hr />
           <p className="My-title">My best friends</p>
-          <MyBestFriends friendList={FriendList} />
+          <SearchFriends friendList={bestFriendsList} />
           <hr />
           <p className="My-title">Average age of my best friends</p>
           <AverageAgeBestFriends friendList={FriendList} />
