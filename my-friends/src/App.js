@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { FriendList } from './data/ListOfFriends.js'
-import { MyFriends } from './components/AllMyFriends.js'
 import { MyBestFriends } from './components/MyBestFriends.js'
 import { AverageAgeBestFriends } from './components/AverageAgeBestFriends.js'
 import { HeaderBar } from './components/Header.js'
 import DynamicList from './components/DynamicList.js'
+import SearchAllFriends from './components/SearchAllFriends.js'
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
         <HeaderBar logo={logo} />
         <div className="My-body">
           <p className="My-title">All my friends</p>
-          <MyFriends friendList={FriendList} />
+          <SearchAllFriends friendList={FriendList} />
           <hr />
           <p className="My-title">My best friends</p>
           <MyBestFriends friendList={FriendList} />
