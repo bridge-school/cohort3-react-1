@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Filter from './Filter'
 
 
-const List = ({ name, data, summary }) => {
-    return (
-        <div>
-            <h1 className="App-header">{name}</h1>
-            <ul>
-                {data.map(item => <li key={item}>{item}</li>)}
-            </ul>
-            <div className="App-title">{summary}</div>
-        </div>
-    )
+class List extends Component {
+
+    getName = ({ first, last }) => {
+        let name = first ? `${first}` : '';
+        name += last ? ` ${last}` : '';
+        return name;
+    };
+
+    render() {
+        return (
+            <div>
+                <ul>
+                    {this.props.data.map((item, index) => <li key={index}>{this.getName(item)}</li>)}
+                </ul>
+            </div>
+        )
+    }
 }
 
 export default List;
