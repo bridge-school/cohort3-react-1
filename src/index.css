@@ -4,10 +4,14 @@ body {
   font-family: sans-serif;
 }
 
-.mainData {
-	max-width: 730px;
-	margin: 5px auto;
+.appHeader {
 	text-align: center;
+	color:white;
+	background: #2980b9;
+	background: linear-gradient(to right, #2980b9, #2c3e50);	
+	padding: 20px;
+	text-transform: uppercase;
+	letter-spacing: 5px; 
 }
 
 .friendList {
@@ -25,7 +29,7 @@ body {
 	text-align: left;
 	padding: 20px;
 	margin:10px;
-	display: inline-block;
+	max-width: 200px;
 	background:lightgrey;
 	background:linear-gradient(to bottom right, lightgrey, white);
 }
@@ -34,6 +38,11 @@ body {
 	clear:both;
 }
 
-h2 {
-	margin:0;
+.searchBar input {
+	width:95%;
+	font-size: 1em;
+}
+
+.listContainer h2 {
+	margin:10px 0;
 }
