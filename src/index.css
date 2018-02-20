@@ -21,12 +21,9 @@ body {
 	margin-bottom:0;
 }
 
-.friendList li:hover {
-	color:#62dbfb;
-}
 
 .listContainer {
-	text-align: left;
+	display: inline-block;
 	padding: 20px;
 	margin:10px;
 	max-width: 200px;
@@ -34,15 +31,11 @@ body {
 	background:linear-gradient(to bottom right, lightgrey, white);
 }
 
-.clearBoth {
-	clear:both;
+.listContainer h2 {
+	margin:10px 0;
 }
 
 .searchBar input {
 	width:95%;
 	font-size: 1em;
-}
-
-.listContainer h2 {
-	margin:10px 0;
 }

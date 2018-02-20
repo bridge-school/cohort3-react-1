@@ -10,13 +10,18 @@ class FriendList extends Component {
 	
 	render() {
 
-		const friends = this.props.data
+		let friends = this.props.data
 		.filter(item => {
       let regex = new RegExp(this.state.term,"gi");
       let name = `${item.first} ${item.last}`; 
       return name.match(regex) || item.last.match(regex) || name.match(regex);}
       )
 		.map(item => <FriendListItem data={item}/>);
+
+		if(this.props.condition){
+			friends = friends.filter(item => item.props.data.isBestFriend);
+			console.log(friends);
+		}
 
 		return (
 			<div className="listContainer">

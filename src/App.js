@@ -15,6 +15,11 @@ class App extends Component {
             data={FriendsData} 
             header="All friends" 
             searchPlaceholder="Search all friends"/>
+            <FriendList 
+            data={FriendsData} 
+            header="Best friends" 
+            searchPlaceholder="Search best friends"
+            condition="isBestFriend"/>
           <AverageAge data={FriendsData}/>
         </div>
       </div>   
