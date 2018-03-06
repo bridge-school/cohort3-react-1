@@ -5,14 +5,20 @@ import data from './data.json';
 import { AverageAge } from './Components/average-age';
 import { FriendsList } from './Components/friends-list';
 import { BestFriendsList } from './Components/best-friends-list';
+import { SearchBar } from './Components/search-bar';
 import FriendCard from "./FriendCard";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      showHeader: true
+      showHeader: true,
+      query: ''
     }
+  }
+
+  handleInputChange = () => {
+    this.setState({ query: this.search.value })
   }
 
   toggleHeader = () => {
@@ -20,6 +26,11 @@ class App extends Component {
   };
   
   render() {
+    let filteredFriends = data.filter(
+      (friend) => {
+        return friend.first.toLowerCase().indexOf(this.state.query.toLowerCase()) !== -1
+      }
+    )
     return (
       <div className="App">
         <div>
@@ -27,17 +38,36 @@ class App extends Component {
           Body Text
           <button onClick={this.toggleHeader}>Toggle</button>
         </div>
+
+      <form>
+       <input
+         placeholder="Search for..."
+         ref={input => this.search = input}
+         onChange={this.handleInputChange}
+       />
+       <p>{this.state.query}</p>
+     </form>
+        <SearchBar />
         <Header>Friends List</Header>
-        <AverageAge data={ data }/>
-        <FriendsList data={ data }/>
-        <BestFriendsList data={ data }/>
-        <ul>
+        
+        {  filteredFriends.map((friend) =>
+            <li>              
+              <FriendCard {...friend} />
+            </li>
+          )}
+
+
+        {/* <AverageAge data={ data }/> */}
+        {/* <FriendsList data={ data }/> */}
+        {/* <FriendsList data={ data }/> */}
+        {/* <BestFriendsList data={ data }/> */}
+        {/* <ul>
           {data.map(friend => (
             <li>
               <FriendCard {...friend} />
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     );
   }
