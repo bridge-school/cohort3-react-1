@@ -47,7 +47,7 @@ class App extends Component {
        />
        <p>{this.state.query}</p>
      </form>
-        <SearchBar />
+        {/* <SearchBar /> */}
         <Header>Friends List</Header>
         
         {  filteredFriends.map((friend) =>
