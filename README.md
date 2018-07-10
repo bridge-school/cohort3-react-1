@@ -1,3 +1,10 @@
+# Start up the Application
+
+cd to your cohort-react-1/my-app directory then enter:
+```
+npm start
+```
+
 # cohort3-react-1
 
 First React Assignment
